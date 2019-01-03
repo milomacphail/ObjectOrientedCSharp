@@ -4,23 +4,41 @@ namespace myapp
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var dozer = new BullDozer ("yellow", "mini");
-
-            var dozer2 = new BullDozer ("red", "large");
-
-            Console.WriteLine("One bulldozer is " + dozer.color +".");
-            Console.WriteLine("The other bulldozer is " + dozer2.color +".");
+            var man = new Man();
+            var kart = new Kart();
+            var alien = new Alien ();
+            
         }
     }
-    public class BullDozer
-    {
-        public BullDozer (string _color, string _size) {
-            this.color = _color;
-            this.size = _size;
+        public class baseProperties 
+        {
+            public baseProperties () {
+            }
+            public bool moves { get; set;}
+            public string color { get; set;}
         }
-        public string color { get; set;}
-        public string size { get; set;}
+    public class Man : baseProperties
+    {
+        public Man () {
+        }
+        
+        public string name { get; set;}
+    }
+    public class Kart : baseProperties
+    {
+        public Kart () {
+
+        }
+        public string model { get; set;}
+    }
+    
+    public class Alien : baseProperties
+    {
+    public Alien () {
+
+    }
+            public string planet { get; set;}
     }
 }
