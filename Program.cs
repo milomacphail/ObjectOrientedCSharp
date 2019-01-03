@@ -9,7 +9,6 @@ namespace myapp
             var man = new Man();
             var kart = new Kart();
             var alien = new Alien ();
-            
         }
     }
         public class baseProperties 
@@ -19,12 +18,26 @@ namespace myapp
             public bool moves { get; set;}
             public string color { get; set;}
         }
-    public class Man : baseProperties
+
+    public class Human : baseProperties
+    {
+        public Human () {
+        }
+        public string name { get; set; }
+    }
+
+    public class Man : Human
     {
         public Man () {
         }
-        
-        public string name { get; set;}
+    }
+
+    public class Woman : Human
+    {
+        public Woman () {
+
+        }
+
     }
     public class Kart : baseProperties
     {
